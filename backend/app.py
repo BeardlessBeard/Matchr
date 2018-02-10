@@ -11,19 +11,19 @@ def home_page():
 def new():
     return 'new thing'
 
-@app.route('/feed/user')
+@app.route('/feed/')
 def feed_user():
     return 'feed user'
 
-@app.route('/voteHot/id')
+@app.route('/voteHot/')
 def vote_hot():
     return 'vote 1'
 
-@app.route('/voteNot/id')
-def vote_hot():
+@app.route('/voteNot/')
+def vote_not():
     return 'vote -1'
 
-@app.route('/results/user')
+@app.route('/results/')
 def results_user():
     return 'user results page #govols'
 
