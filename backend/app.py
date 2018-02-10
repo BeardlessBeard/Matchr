@@ -4,13 +4,30 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():
+def home_page():
     return 'Hello, World!'
 
+@app.route('/new')
+def new():
+    return 'new thing'
 
-@app.route('/new_message')
-def new_message():
-    return 'YOLO!'
+@app.route('/feed/user')
+def feed_user():
+    return 'feed user'
+
+@app.route('/voteHot/id')
+def vote_hot():
+    return 'vote 1'
+
+@app.route('/voteNot/id')
+def vote_hot():
+    return 'vote -1'
+
+@app.route('/results/user')
+def results_user():
+    return 'user results page #govols'
+
+
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
