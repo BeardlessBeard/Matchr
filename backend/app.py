@@ -1,8 +1,9 @@
-from flask import Flask
+from flask import Flask, send_file
 import os
 import json
 app = Flask(__name__)
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
 @app.route('/')
 def home_page():
@@ -76,6 +77,10 @@ def results_user():
 
     ]
     return json.dumps(feed)
+
+@app.route('/image/<int:post_id>/pants/<filename>')
+def image(post_id, filename):
+    return send_file('{}/image/{}/pants/{}'.format(dir_path, post_id, filename))
 
 
 if __name__ == '__main__':
