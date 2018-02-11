@@ -10,22 +10,22 @@ feed = [
         'user': 'William Lifferth',
         'postID': 100001,
         'shirtURL': '/image/100001/shirt.jpg',
-        'pants': {
-            '/image/100001/pants/0.jpg': 4,
-            '/image/100001/pants/1.jpg': 2,
-            '/image/100001/pants/2.jpg': 1,
-            }
+        'pants': [
+            {'url': '/image/100001/pants/0.jpg', 'score': 4},
+            {'url': '/image/100001/pants/1.jpg', 'score': 2},
+            {'url': '/image/100001/pants/2.jpg', 'score': 1},
+            ]
         },
     {
         'user': 'Kelsey Veca',
         'postID': 100001,
         'shirtURL': '/image/100001/shirt.jpg',
-        'pants': {
-            '/image/100002/pants/0.jpg': 2,
-            '/image/100002/pants/1.jpg': 1,
-            '/image/100002/pants/2.jpg': 4,
-            '/image/100002/pants/3.jpg': 1,
-            }
+        'pants': [
+            {'url': '/image/100002/pants/0.jpg', 'score': 2},
+            {'url': '/image/100002/pants/1.jpg', 'score': 1},
+            {'url': '/image/100002/pants/2.jpg', 'score': 4},
+            {'url': '/image/100002/pants/3.jpg', 'score': 1},
+            ]
         },
 
 ]
