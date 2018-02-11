@@ -1,32 +1,82 @@
 from flask import Flask
 import os
+import json
 app = Flask(__name__)
 
 
 @app.route('/')
 def home_page():
-    return 'Hello, World!'
+    return 'homepage'
 
 @app.route('/new')
 def new():
-    return 'new thing'
+    return json.dumps({'status': 'ok'})
 
 @app.route('/feed/')
 def feed_user():
-    return 'feed user'
+    feed = [
+            {
+                'user': 'William Lifferth',
+                'postID': 100001,
+                'shirtURL': '/image/100001/shirt',
+                'pants': {
+                    '/image/100001/pants/0': 4,
+                    '/image/100001/pants/1': 2,
+                    '/image/100001/pants/2': 1,
+                    '/image/100001/pants/4': 0,
+                    }
+            },
+            {
+                'user': 'Kelsey Veca',
+                'postID': 100001,
+                'shirtURL': '/image/100001/shirt',
+                'pants': {
+                    '/image/100002/pants/0': 2,
+                    '/image/100002/pants/1': 1,
+                    '/image/100002/pants/2': 4,
+                    '/image/100002/pants/4': 1,
+                    }
+            },
+
+    ]
+    return json.dumps(feed)
 
 @app.route('/voteHot/')
 def vote_hot():
-    return 'vote 1'
+    return json.dumps({'status': 'ok'})
 
 @app.route('/voteNot/')
 def vote_not():
-    return 'vote -1'
+    return json.dumps({'status': 'ok'})
 
 @app.route('/results/')
 def results_user():
-    return 'user results page #govols'
+    feed = [
+            {
+                'user': 'William Lifferth',
+                'postID': 100001,
+                'shirtURL': '/image/100001/shirt',
+                'pants': {
+                    '/image/100001/pants/0': 4,
+                    '/image/100001/pants/1': 2,
+                    '/image/100001/pants/2': 1,
+                    '/image/100001/pants/4': 0,
+                    }
+            },
+            {
+                'user': 'Kelsey Veca',
+                'postID': 100001,
+                'shirtURL': '/image/100001/shirt',
+                'pants': {
+                    '/image/100002/pants/0': 2,
+                    '/image/100002/pants/1': 1,
+                    '/image/100002/pants/2': 4,
+                    '/image/100002/pants/4': 1,
+                    }
+            },
 
+    ]
+    return json.dumps(feed)
 
 
 if __name__ == '__main__':
