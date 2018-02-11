@@ -3,6 +3,9 @@ package com.matcherapp.matchr;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android.volley.*;
@@ -41,6 +44,7 @@ public class feed extends AppCompatActivity {
                             }
 
                         } catch (JSONException e) {
+                            e.printStackTrace();
                             return;
                         }
 
@@ -48,6 +52,7 @@ public class feed extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
                 mTextView.setText("That didn't work!");
                 Log.v("Should be error", error.toString());
             }
@@ -55,8 +60,14 @@ public class feed extends AppCompatActivity {
         queue.add(stringRequest);
     }
 
-    void addElementToPage(Post1 p)
+    void addElementToPage(Post1 p) throws JSONException
     {
-
+        View view;
+        LinearLayout parentLayout = findViewById(R.id.cardContainer);
+        LayoutInflater layoutInflater = getLayoutInflater();
+        view = layoutInflater.inflate(R.layout.activity_feed, parentLayout, false);
+        TextView textView = view.findViewById(R.id.textView);
+        textView.setText(p.user);
+        parentLayout.addView(textView);
     }
 }
