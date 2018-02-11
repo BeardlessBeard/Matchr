@@ -30,7 +30,7 @@ public class post extends AppCompatActivity {
             public void onClick(View view) {
                 Intent submitIntent;
 
-                submitIntent = new Intent(getApplicationContext(), feed.class);
+                submitIntent = new Intent(getApplicationContext(), Navigation.class);
 
                 startActivity(submitIntent);
             }
