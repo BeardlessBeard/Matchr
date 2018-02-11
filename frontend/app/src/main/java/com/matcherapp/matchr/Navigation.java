@@ -85,7 +85,7 @@ public class Navigation extends AppCompatActivity
         if (id == R.id.nav_camera) {
             // Handle the camera action
             Intent addnewthing;
-            addnewthing = new Intent(getApplicationContext(), post.class);
+            addnewthing = new Intent(getApplicationContext(), voting.class);
             startActivity(addnewthing);
         } else if (id == R.id.nav_gallery) {
 
