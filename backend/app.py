@@ -5,6 +5,32 @@ app = Flask(__name__)
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
+feed =
+[
+    {
+        'user': 'William Lifferth',
+        'postID': 100001,
+        'shirtURL': '/image/100001/shirt.jpg',
+        'pants': {
+            '/image/100001/pants/0.jpg': 4,
+            '/image/100001/pants/1.jpg': 2,
+            '/image/100001/pants/2.jpg': 1,
+            }
+        },
+    {
+        'user': 'Kelsey Veca',
+        'postID': 100001,
+        'shirtURL': '/image/100001/shirt.jpg',
+        'pants': {
+            '/image/100002/pants/0.jpg': 2,
+            '/image/100002/pants/1.jpg': 1,
+            '/image/100002/pants/2.jpg': 4,
+            '/image/100002/pants/3.jpg': 1,
+            }
+        },
+
+]
+
 @app.route('/')
 def home_page():
     return 'homepage'
@@ -15,30 +41,6 @@ def new():
 
 @app.route('/feed/')
 def feed_user():
-    feed = [
-            {
-                'user': 'William Lifferth',
-                'postID': 100001,
-                'shirtURL': '/image/100001/shirt',
-                'pants': {
-                    '/image/100001/pants/0': 4,
-                    '/image/100001/pants/1': 2,
-                    '/image/100001/pants/2': 1,
-                    }
-            },
-            {
-                'user': 'Kelsey Veca',
-                'postID': 100001,
-                'shirtURL': '/image/100001/shirt',
-                'pants': {
-                    '/image/100002/pants/0': 2,
-                    '/image/100002/pants/1': 1,
-                    '/image/100002/pants/2': 4,
-                    '/image/100002/pants/3': 1,
-                    }
-            },
-
-    ]
     return json.dumps(feed)
 
 @app.route('/voteHot/')
@@ -51,31 +53,6 @@ def vote_not():
 
 @app.route('/results/')
 def results_user():
-    feed = [
-            {
-                'user': 'William Lifferth',
-                'postID': 100001,
-                'shirtURL': '/image/100001/shirt',
-                'pants': {
-                    '/image/100001/pants/0': 4,
-                    '/image/100001/pants/1': 2,
-                    '/image/100001/pants/2': 1,
-                    '/image/100001/pants/4': 0,
-                    }
-            },
-            {
-                'user': 'Kelsey Veca',
-                'postID': 100001,
-                'shirtURL': '/image/100001/shirt',
-                'pants': {
-                    '/image/100002/pants/0': 2,
-                    '/image/100002/pants/1': 1,
-                    '/image/100002/pants/2': 4,
-                    '/image/100002/pants/4': 1,
-                    }
-            },
-
-    ]
     return json.dumps(feed)
 
 @app.route('/image/<int:post_id>/pants/<filename>')
