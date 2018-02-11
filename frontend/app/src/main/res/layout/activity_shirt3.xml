@@ -88,7 +88,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.089999974"
-                        app:srcCompat="@android:color/holo_blue_dark" />
+                        app:srcCompat="@drawable/ants1" />
 
                     <CheckBox
                         android:id="@+id/checkBox1"
@@ -116,7 +116,7 @@
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
-                        android:text="98%"
+                        android:text="64%"
                         android:textAlignment="center"
                         android:textSize="30sp"
                         android:textStyle="bold"
@@ -146,7 +146,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.089999974"
-                        app:srcCompat="@color/colorPrimaryDark" />
+                        app:srcCompat="@drawable/ants7" />
 
                     <CheckBox
                         android:id="@+id/checkBox2"
@@ -174,7 +174,7 @@
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
-                        android:text="73%"
+                        android:text="51%"
                         android:textAlignment="center"
                         android:textSize="30sp"
                         android:textStyle="bold"
@@ -199,7 +199,7 @@
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
-                        android:text="58%"
+                        android:text="32%"
                         android:textAlignment="center"
                         android:textSize="30sp"
                         android:textStyle="bold"
@@ -222,7 +222,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.089999974"
-                        app:srcCompat="@android:color/holo_purple" />
+                        app:srcCompat="@drawable/ants5" />
 
                     <CheckBox
                         android:id="@+id/checkBox3"
@@ -258,7 +258,7 @@
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
-                        android:text="31%"
+                        android:text="25%"
                         android:textAlignment="center"
                         android:textSize="30sp"
                         android:textStyle="bold"
@@ -281,7 +281,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.089999974"
-                        app:srcCompat="@android:color/darker_gray" />
+                        app:srcCompat="@drawable/ants2" />
 
                     <CheckBox
                         android:id="@+id/checkBox4"

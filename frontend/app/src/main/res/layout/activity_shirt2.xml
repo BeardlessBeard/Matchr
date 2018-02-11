@@ -88,7 +88,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.089999974"
-                        app:srcCompat="@android:color/holo_blue_dark" />
+                        app:srcCompat="@drawable/ants0g" />
 
                     <CheckBox
                         android:id="@+id/checkBox1"
@@ -146,7 +146,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.089999974"
-                        app:srcCompat="@color/colorPrimaryDark" />
+                        app:srcCompat="@drawable/ants1g" />
 
                     <CheckBox
                         android:id="@+id/checkBox2"
@@ -222,7 +222,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.089999974"
-                        app:srcCompat="@android:color/holo_purple" />
+                        app:srcCompat="@drawable/ants3g" />
 
                     <CheckBox
                         android:id="@+id/checkBox3"
@@ -281,7 +281,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.089999974"
-                        app:srcCompat="@android:color/darker_gray" />
+                        app:srcCompat="@drawable/ants5g" />
 
                     <CheckBox
                         android:id="@+id/checkBox4"
