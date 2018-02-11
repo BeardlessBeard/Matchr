@@ -62,12 +62,12 @@ public class feed extends AppCompatActivity {
 
     void addElementToPage(Post1 p) throws JSONException
     {
-        View view;
+        /*View view;
         LinearLayout parentLayout = findViewById(R.id.cardContainer);
         LayoutInflater layoutInflater = getLayoutInflater();
         view = layoutInflater.inflate(R.layout.activity_feed, parentLayout, false);
         TextView textView = view.findViewById(R.id.textView);
         textView.setText(p.user);
-        parentLayout.addView(textView);
+        parentLayout.addView(textView);*/
     }
 }
