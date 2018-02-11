@@ -1,45 +1,36 @@
 package com.matcherapp.matchr;
 
-import android.content.Intent;
-import android.provider.MediaStore;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-public class post extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_post);
+public class Post {
 
-        final Button submit;
+    String shirtURL;
+    int postID;
+    String user;
+    Pants[] pants;
 
-        submit = (Button)findViewById(R.id.submitButton);
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent submitIntent;
 
-                submitIntent = new Intent(getApplicationContext(), feed.class);
+    public Post(JSONObject obj)
+    {
+        try {
+            shirtURL = obj.getString("shirtURL");
+            postID = obj.getInt("postID");
+            user = obj.getString("user");
+            pants = getPants(obj);
+        } catch(JSONException e) {}
 
-                startActivity(submitIntent);
-            }
-        });
+    }
 
-        ImageButton upload = (ImageButton)findViewById(R.id.uploadImageButton);
-        upload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final int REQUEST_IMAGE_CAPTURE = 1;
-
-                Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                if(takePictureIntent.resolveActivity(getPackageManager()) != null) {
-                    startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-                }
-            }
-        });
+    private Pants[] getPants(JSONObject obj) throws JSONException {
+        JSONArray pants = obj.getJSONArray("pants");
+        Pants[] rtn = new Pants[pants.length()];
+        for(int i = 0 ; i < pants.length(); i++)
+        {
+            rtn[i] = new Pants(pants.getJSONObject(i));
+        }
+        return rtn;
     }
 }
