@@ -4,22 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.matcherapp.matchr.Navigation"
-    tools:showIn="@layout/app_bar_navigation">
+    tools:context="com.matcherapp.matchr.test">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical" >
 
             <RelativeLayout
                 android:id="@+id/text"
@@ -165,7 +159,7 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/crazyuser"
-                    android:layout_marginTop="11dp"
+                    android:layout_marginTop="19dp"
                     android:layout_toEndOf="@+id/crazyshirt"
                     android:layout_toRightOf="@+id/crazyshirt"
                     android:text="I found this shirt at the thrift store, and I love it but it's a little crazy. I'm not sure if I own any pants that can really go with it. What do you guys think?" />
@@ -174,4 +168,6 @@
 
         </LinearLayout>
     </ScrollView>
+
+
 </android.support.constraint.ConstraintLayout>

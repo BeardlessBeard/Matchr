@@ -14,7 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-public class Navigation extends AppCompatActivity
+public class test extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
