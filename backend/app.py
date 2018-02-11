@@ -23,7 +23,6 @@ def feed_user():
                     '/image/100001/pants/0': 4,
                     '/image/100001/pants/1': 2,
                     '/image/100001/pants/2': 1,
-                    '/image/100001/pants/4': 0,
                     }
             },
             {
@@ -34,7 +33,7 @@ def feed_user():
                     '/image/100002/pants/0': 2,
                     '/image/100002/pants/1': 1,
                     '/image/100002/pants/2': 4,
-                    '/image/100002/pants/4': 1,
+                    '/image/100002/pants/3': 1,
                     }
             },
 
